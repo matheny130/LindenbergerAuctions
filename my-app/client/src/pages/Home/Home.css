@@ -1,0 +1,32 @@
+/* body {
+  background-image: url("../../images/paper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+} */
+
+
+.background {
+  padding-bottom: 127px;
+}
+#p1 {
+  color: whitesmoke;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 50px;
+  align-content: center;
+  text-align: center;
+  /* padding-left: 600px;
+  margin-top: 100px; */
+}
+
+#p2{
+  color: whitesmoke;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 50px;
+  align-content: center;
+  text-align: center;
+  /* padding-left: 600px;
+  margin-top: 100px; */
+}
+
