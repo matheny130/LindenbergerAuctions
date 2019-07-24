@@ -1,4 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Home from './pages/Home/Home';
+import Callback from './Callback/Callback';
+import history from './history';
+import Products from './pages/Products';
+import Product from './pages/Product';
+import NewProduct from './pages/NewProduct';
+import Navbar from './components/Navbar/Navbar';
 import logo from './logo.svg';
 import './App.css';
 
