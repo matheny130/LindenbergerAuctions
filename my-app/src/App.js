@@ -1,33 +1,58 @@
 import React, { Component } from 'react';
-import Home from './pages/Home/Home';
-import Callback from './Callback/Callback';
-import history from './history';
-import Products from './pages/Products';
-import Product from './pages/Product';
-import NewProduct from './pages/NewProduct';
-import Navbar from './components/Navbar/Navbar';
-import logo from './logo.svg';
+import { Route, BrowserRouter as Router} from 'react-router-dom';
+import Home from './components/pages/Home';
+//import Callback from './Callback/Callback';
+//import history from './history';
+import Products from './components/pages/Products/products';
+import Item from './components/pages/Item/item';
+import NewProduct from './components/pages/NewProduct';
+//import Navbar from './components/Navbar/Navbar';
+//import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => (
+
+
+        <Router>
+          <div>
+            <Route exact path="/" component={Home} />
+            <Route path="/products" component={Products} />
+            <Route path="/item/:id" component={Item} />
+            <Route path="/newproduct" component={NewProduct} />
+          </div>
+        </Router>
+
+    );
+
+
+
+
+
+
+
+
+
+
+//function App() {
+  //return (
+   // <div className="App">
+     // <header className="App-header">
+     //   <img src={logo} className="App-logo" alt="logo" />
+       // <p>
+        //  Edit <code>src/App.js</code> and save to reload.
+        //</p>
+        //<a
+          //className="App-link"
+          //href="https://reactjs.org"
+          //target="_blank"
+          //rel="noopener noreferrer"
+        //>
+          //Learn React
+        //</a>
+      //</header>
+    //</div>
+  //);
+//}
 
 export default App;

@@ -3,7 +3,7 @@ import Jumbotron from '../../components/Jumbotron/Jumbotron';
 
 import "./Home.css"
 
-import Quizzes from '../../pages/Quizzes/Quizzes'
+//import Quizzes from '../../pages/Quizzes/Quizzes'
 
 
 class Home extends Component {
@@ -16,7 +16,7 @@ class Home extends Component {
 
 
         <div className="background">
-          <Jumbotron />
+         <Jumbotron />
           <br></br>
           <div id="p1"><p>Home Page</p></div>
           <br></br>

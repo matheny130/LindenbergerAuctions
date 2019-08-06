@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import QuizAPI from "../../utils/QuizAPI";
-import userAPI from "../../utils/userAPI";
-import { Link } from "react-router-dom";
+//import QuizAPI from "../../utils/QuizAPI";
+//import userAPI from "../../utils/userAPI";
+//import { Link } from "react-router-dom";
 
 
 class newUser extends Component {

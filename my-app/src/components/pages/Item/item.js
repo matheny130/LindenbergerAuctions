@@ -3,9 +3,9 @@
 import React, { Component } from "react";
 import quizAPI from "../../utils/QuizAPI";
 import { Input, Button, Label} from 'reactstrap';
-import "./newQuiz.css"
+import "./item.css"
 import Select from 'react-select';
-import history from "../../history";
+//import history from "../../history";
 
 const options  = [
   { value: 'true', label: 'Yes' },
@@ -196,7 +196,7 @@ class newQuiz extends Component {
           }
         }
       } })
-      .then(history.replace("/"))
+      //.then(history.replace("/"))
       .catch(err => console.log(err));
 
 
