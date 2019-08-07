@@ -3,15 +3,15 @@
 }
 
 #nav {
-    /* background-image: url("../../images/chalkboard.jpg"); */
+    background-image: url("../../images/chalkboard.jpg");
     font-family: 'Fredericka the Great', cursive;
 }
 
 #logo {
     color: white;
-    /* background-image: url("../../images/chalkboard.jpg"); */
+    background-image: url("../../images/chalkboard.jpg");
     text-align: center;
-    
+
 }
 
 #link {
