@@ -44,16 +44,16 @@ class NavExample extends React.Component {
             <Nav navbar>
               <NavItem>
 
-                <NavLink href="#" onClick={() => history.replace("/")}><p id="link">Home</p></NavLink>
+                <NavLink href="/">Home</NavLink>
 
               </NavItem>
               <NavItem>
 
-                <NavLink href="#" onClick={() => history.replace("/quizzes")}><p id="link">View Quizzes</p></NavLink>
+                <NavLink href="/Products">View Quizzes</NavLink>
 
               </NavItem>
               <NavItem>
-                <NavLink href="#" onClick={() => history.replace("/newquiz")}><p id="link">Create a Quiz</p></NavLink>
+                <NavLink href="/newProduct">Create a Quiz</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

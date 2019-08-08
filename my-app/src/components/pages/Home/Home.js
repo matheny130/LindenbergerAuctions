@@ -20,10 +20,6 @@ class Home extends Component {
         <NavExample />
           <br></br>
           <div id="p1"><p>Home Page</p></div>
-          <br></br>
-          <div id="p2"><p>Other Stuff Here</p></div>
-
-
         </div>
 
     );

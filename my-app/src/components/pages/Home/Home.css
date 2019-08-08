@@ -1,8 +1,5 @@
 body {
-  background-image: url("../../images/chalkboard.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
   height: 100%;
 }
 
@@ -12,7 +9,7 @@ body {
 }
 #p1 {
   color: whitesmoke;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Rufina', serif;
   font-size: 50px;
   align-content: center;
   text-align: center;
@@ -22,7 +19,7 @@ body {
 
 #p2{
   color: whitesmoke;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Rufina', serif;
   font-size: 50px;
   align-content: center;
   text-align: center;

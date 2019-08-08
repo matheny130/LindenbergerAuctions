@@ -3,13 +3,13 @@
 }
 
 #nav {
-    background-image: url("../../images/chalkboard.jpg");
-    font-family: 'Fredericka the Great', cursive;
+    background-color: black;
+    font-family: 'Rufina', serif;
 }
 
 #logo {
     color: white;
-    background-image: url("../../images/chalkboard.jpg");
+    background-color: black;
     text-align: center;
 
 }
