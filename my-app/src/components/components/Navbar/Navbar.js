@@ -1,70 +1,59 @@
 import React from "react";
-import history from "../../../history";
-import { Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink, Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import './Navbar.css'
 
 class NavExample extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.toggle = this.toggle.bind(this);
     this.state = {
-      collapsed: true
+      isOpen: false
     };
   }
-
-  toggleNavbar() {
+  toggle() {
     this.setState({
-      collapsed: !this.state.collapsed
+      isOpen: !this.state.isOpen
     });
   }
-    goTo(route) {
-      this.props.history.replace(`/${route}`)
-    }
-
-  login() {
-    this.props.auth.login();
-  }
-
-  logout() {
-    this.props.auth.logout();
-  }
-
-
   render() {
-
     return (
-      <div id="nav">
-        <Navbar color="faded" light>
-
-          <NavbarBrand href="/" className="text-center"><p id="logo"></p></NavbarBrand>
-
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
+      <div>
+        <Navbar expand="md">
+          <NavbarBrand href="/">419-668-0000</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
               <NavItem>
-
-                <NavLink href="/">Home</NavLink>
-
+                <NavLink href="/components/">Home</NavLink>
               </NavItem>
               <NavItem>
-
-                <NavLink href="/Products">View Quizzes</NavLink>
-
+                <NavLink href="https://github.com/reactstrap/reactstrap">Auctioneer Services</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/newProduct">Create a Quiz</NavLink>
-              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Items for Sale
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Lamps
+                  </DropdownItem>
+                  <DropdownItem>
+                    Furniture
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Miscellaneous
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
-
         </Navbar>
       </div>
     );
   }
-
-
-
 }
 
 export default NavExample;
