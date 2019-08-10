@@ -24,6 +24,8 @@
     display: inline-block;
     width: 400px;
     font-family: 'Marcellus SC' serif;
+    font-display: center;
+    padding-left: 20px;
 }
 .drop {
     background-color: black;
