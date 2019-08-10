@@ -14,10 +14,24 @@
 
 }
 
-#link {
+.link {
+    width: 600px;
+    height: 100px;
+}
+.nav {
     color: white;
+    font-size: 25px;
+    display: inline-block;
+    width: 400px;
+    font-family: 'Marcellus SC' serif;
+}
+.drop {
+    background-color: black;
 }
 
+.droplink {
+    background-color: black;
+}
 
 .nav-item{
     width: 100px;

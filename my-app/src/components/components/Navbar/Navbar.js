@@ -27,40 +27,43 @@ class NavExample extends React.Component {
                   <NavbarToggler onClick={this.toggle} />
                   <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                  <Col xs="10">
-                    <NavItem>
-                      <NavLink href="/">419-668-0000</NavLink>
-                    </NavItem>
-                  </Col>
-                    <Col xs="10">
+                  <div className="link">
+                    <Col>
+                      <NavItem>
+                        <NavLink href="/"><div className="nav">419-668-0000</div></NavLink>
+                      </NavItem>
+                    </Col>
+                  </div>
+                  <div className="link">
+                    <Col>
                         <NavItem>
-                          <NavLink href="/components/">Home</NavLink>
+                          <NavLink href="https://github.com/reactstrap/reactstrap"><div className="nav">Auctioneer Services</div></NavLink>
                         </NavItem>
                     </Col>
-                    <Col xs="10">
-                        <NavItem>
-                          <NavLink href="https://github.com/reactstrap/reactstrap">Auctioneer Services</NavLink>
-                        </NavItem>
-                    </Col>
-                    <Col xs="10">
-                        <UncontrolledDropdown nav inNavbar>
-                          <DropdownToggle nav caret>
-                            Items for Sale
-                          </DropdownToggle>
-                          <DropdownMenu right>
-                            <DropdownItem>
-                              Lamps
-                            </DropdownItem>
-                            <DropdownItem>
-                              Furniture
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                              Miscellaneous
-                            </DropdownItem>
-                          </DropdownMenu>
-                        </UncontrolledDropdown>
-                  </Col>
+                  </div>
+                  <div className="link">
+                      <Col>
+                          <UncontrolledDropdown nav inNavbar>
+                            <DropdownToggle nav caret>
+                              <div className="nav">Items for Sale</div>
+                        </DropdownToggle>
+                          <div className="drop">
+                              <DropdownMenu center>
+                                <DropdownItem color-dark>
+                                  <div className="dropLink">Lamps</div>
+                                </DropdownItem>
+                                <DropdownItem color-dark>
+                                  Furniture
+                                </DropdownItem>
+                                <DropdownItem divider />
+                                <DropdownItem color-dark>
+                                  Miscellaneous
+                                </DropdownItem>
+                              </DropdownMenu>
+                          </div>
+                          </UncontrolledDropdown>
+                      </Col>
+                    </div>
                   </Nav>
                   </Collapse>
                 </Row>
