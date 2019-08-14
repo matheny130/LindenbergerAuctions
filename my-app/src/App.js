@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router} from 'react-router-dom';
 import Home from './components/pages/Home';
 //import Callback from './Callback/Callback';
 //import history from './history';
+import Auctioneer from './components/pages/Auctioneer/Auctioneer'
 import Products from './components/pages/Products/products';
 import Item from './components/pages/Item/item';
 import NewProduct from './components/pages/NewProduct';
@@ -17,6 +18,7 @@ const App = () => (
         <Router>
           <div>
             <Route exact path="/" component={Home} />
+            <Route path="/auctioneerservices" component={Auctioneer} />
             <Route path="/products" component={Products} />
             <Route path="/item/:id" component={Item} />
             <Route path="/newproduct" component={NewProduct} />

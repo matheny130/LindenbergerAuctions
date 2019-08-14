@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import Jumbotron from '../../components/Jumbotron/Jumbotron';
+import NavExample from '../../components/Navbar/Navbar';
 //import QuizAPI from "../../utils/QuizAPI";
 //import UserAPI from "../../utils/userAPI";
 //import { Link } from "react-router-dom";
 
 
 
-class Login extends Component {
+class Products extends Component {
   state = {
     username: "",
     password: ""
@@ -15,11 +17,14 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <p>Login Page</p>
+      <div className="background">
+        <Jumbotron />
+        <NavExample />
+        <br></br>
+        <div id="p1"><p>Products</p></div>
       </div>
     );
   }
 }
 
-export default Login;
+export default Products;

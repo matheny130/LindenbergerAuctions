@@ -37,7 +37,7 @@ class NavExample extends React.Component {
                   <div className="link">
                     <Col>
                         <NavItem>
-                          <NavLink href="https://github.com/reactstrap/reactstrap"><div className="nav">Auctioneer Services</div></NavLink>
+                          <NavLink href="/auctioneerservices"><div className="nav">Auctioneer Services</div></NavLink>
                         </NavItem>
                     </Col>
                   </div>
@@ -49,14 +49,14 @@ class NavExample extends React.Component {
                         </DropdownToggle>
                           <div className="drop">
                               <DropdownMenu center>
-                                <DropdownItem color-dark>
+                                <DropdownItem href="/products" color-dark>
                                   <div className="dropLink">Lamps</div>
                                 </DropdownItem>
-                                <DropdownItem color-dark>
+                                <DropdownItem href="/products" color-dark>
                                   Furniture
                                 </DropdownItem>
                                 <DropdownItem divider />
-                                <DropdownItem color-dark>
+                                <DropdownItem href="/products" color-dark>
                                   Miscellaneous
                                 </DropdownItem>
                               </DropdownMenu>
