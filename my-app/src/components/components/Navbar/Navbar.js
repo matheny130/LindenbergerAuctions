@@ -44,7 +44,7 @@ class NavExample extends React.Component {
                   <div className="link">
                       <Col>
                           <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
+                        <DropdownToggle nav>
                               <div className="nav">Items for Sale</div>
                         </DropdownToggle>
                           <div className="drop">
