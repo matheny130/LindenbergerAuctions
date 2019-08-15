@@ -12,7 +12,7 @@ const options  = [
   { value: 'false', label: 'No' }
 ]
 
-class newQuiz extends Component {
+class Item extends Component {
   constructor(props){
     super(props);
   this.state = {
@@ -452,4 +452,4 @@ class newQuiz extends Component {
   }
 }
 
-export default newQuiz;
+export default Item;
