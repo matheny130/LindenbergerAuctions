@@ -3,7 +3,7 @@ import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import NavExample from '../../components/Navbar/Navbar';
 import QuizAPI from "../../utils/QuizAPI";
 import QuizBox from "../../components/QuizBox/QuizBox";
-// import data from "../../data.json";
+//import data from "../../data.json";
 import Container from "../../components/Container/Container";
 //import UserAPI from "../../utils/userAPI";
 //import { Link } from "react-router-dom";
