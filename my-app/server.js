@@ -3,11 +3,12 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3306;
 const con = mysql.createConnection({
   host: "localhost",
-  user: "matheny130",
+  user: "root",
   password: "",
+  database: "",
 });
 
 // Define middleware here
@@ -26,6 +27,10 @@ con.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
 });
+
+app.get('/', function (req, resp) {
+  connection.query("SELECT * FROM sampleDB", function(error, rows, fields))
+})
 
 // Start the API server
 app.listen(PORT, function() {
