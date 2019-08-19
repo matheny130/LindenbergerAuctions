@@ -8,7 +8,7 @@ const con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "",
+  database: "lindenbergerauctions",
 });
 
 // Define middleware here
@@ -29,8 +29,8 @@ con.connect(function (err) {
 });
 
 app.get('/', function (req, resp) {
-  connection.query("SELECT * FROM sampleDB", function(error, rows, fields))
-})
+  connection.query("SELECT * FROM products", function (error, rows, fields){})
+});
 
 // Start the API server
 app.listen(PORT, function() {

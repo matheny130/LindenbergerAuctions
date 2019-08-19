@@ -36,3 +36,20 @@ DESCRIBE products;
 SHOW tables;
 
 SELECT * from products;
+
+INSERT INTO products(category, title, price, description, picture)
+VALUES ("furniture", "antique chest", 750.00, "Antique chest. Pretty Cool.","chest1.jpg"), 
+("miscellaneous", "globes", 1300.00, "Two Globes. Only available as set.", "globe1.jpg"),
+("lamp", "lamp with green shade", 95.00, "Small lamp with green stained glass shade.", "lamp2.jpg");
+
+DESCRIBE products;
+
+SHOW TABLES;
+
+SELECT * FROM products;
+
+DELETE FROM products WHERE id = 7;
+DELETE FROM products WHERE id = 8;
+DELETE FROM products WHERE id = 9;
+
+SELECT * FROM products;

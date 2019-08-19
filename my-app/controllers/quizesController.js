@@ -1,4 +1,4 @@
-const Quizes = require("../models/quizes");
+const Quizes = require("../models/products");
 
 // Defining methods for the quizesController
 module.exports = {
@@ -12,11 +12,11 @@ module.exports = {
   findById: function(req, res) {
     Quizes
       .findById(req.params.id)
-      .then(dbModel =>{ 
+      .then(dbModel =>{
         return res.json(dbModel)
       })
       .catch(err => res.status(422).json(err));
-      
+
   },
   create: function(req, res) {
     Quizes
