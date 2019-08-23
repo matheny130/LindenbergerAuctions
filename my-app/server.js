@@ -1,19 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mysql = require("mysql");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3306;
-const con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "lindenbergerauctions",
-});
+const db = require("./models");
+
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static("public"));
 // Serve up static assets (usually on heroku)
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
@@ -33,6 +29,8 @@ app.get('/', function (req, resp) {
 });
 
 // Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 });
