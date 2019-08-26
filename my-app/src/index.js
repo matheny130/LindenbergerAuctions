@@ -1,12 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-//import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
+import mainReducer from './Reducers';
+import watchFetchSearchData from './Sagas.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-//serviceWorker.unregister();
+//saga middleware
+const sagaMiddleware = createSagaMiddleware();
+
+//redux store with saga middleware
+const store = createStore(mainReducer, applyMiddleware(sagaMiddleware));
+// activate the saga(s)
+sagaMiddleware.run(watchFetchSearchData);
+
+//fetch initial data
+store.dispatch({ type: 'FETCH_SEARCH_DATA', payload: { category: '*' } });
+
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root')
+);
